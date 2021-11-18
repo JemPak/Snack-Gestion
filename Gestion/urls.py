@@ -21,7 +21,10 @@ from apps.Contact import views as contact
 urlpatterns = [
     path('contact/', contact.ContactListCreateView.as_view()),                            #create a new contact request
     path('contact/<int:pk>', contact.ContactRetrieveUpdateDestroy.as_view()),             #retrieve a request with the pk   
-    path('contact/active', contact.contactView.ContactIsActiveView.as_view()),            #retrive all the request that is active
+    path('contact/active', contact.contactView.ContactIsActiveView.as_view()),            #retrive all the request that is active  
+    path('installation/user/<int:pk>',),             
     path('installation/', install.InstallationListCreateView.as_view()),                  #create a new installation request 
     path('installation/<int:pk>', install.InstallationRetrieveUpdateDestroy.as_view()),   #retrieve a request with the pk
+    path('installation/unaccepted', install.installationView.InstallationIsAcceptedView.as_view()),  
+    path('installation/user/<int:pk>',), 
 ]

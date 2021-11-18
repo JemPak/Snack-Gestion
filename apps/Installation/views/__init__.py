@@ -1,1 +1,1 @@
-from .installationView import InstallationListCreateView, InstallationRetrieveUpdateDestroy
+from .installationView import InstallationListCreateView, InstallationRetrieveUpdateDestroy, InstallationIsAcceptedView

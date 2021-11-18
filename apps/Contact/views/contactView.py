@@ -7,7 +7,7 @@ from rest_framework import generics, views
 from apps.Contact.serializers.contactSerializer import ContactSerializer
 
 class ContactIsActiveView(generics.ListAPIView):
-    queryset = Contact.objects.filter(is_active=True)
+    queryset = Contact.objects.filter(is_active=True)[:10]
     serializer_class = ContactSerializer
 
 class ContactListCreateView(generics.ListCreateAPIView):
