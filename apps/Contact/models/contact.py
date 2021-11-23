@@ -17,4 +17,19 @@ class Contact (models.Model):
     date_create = models.DateField("Date_create", auto_now_add=True)
     date_response = models.DateField("Date_response", null=True) 
 
+    def this_contact (self):
+        return{
+            "contact_id": self.contact_id,
+            "user_id": self.user_id,
+            "assesory": self.assesory,
+            "comment": self.comment,
+            "is_active": self.is_active,
+            "response": self.response,
+            "date_create": self.date_create,
+            "date_response": self.date_response
+        }
+        
+    
+    
+
         
