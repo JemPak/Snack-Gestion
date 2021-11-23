@@ -11,7 +11,7 @@ class ContactIsActiveView(generics.ListAPIView):
     queryset = Contact.objects.filter(is_active=True)[:10]
     serializer_class = ContactSerializer
 
-class Contact_User(generics.ListAPIView):
+class ContactUser(generics.ListAPIView):
     serializer_class = ContactSerializer
     
     def get_queryset(self):

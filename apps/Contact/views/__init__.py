@@ -1,1 +1,1 @@
-from .contactView import ContactListCreateView, ContactRetrieveUpdateDestroy, Contact_User, ContactIsActiveView
+from .contactView import ContactListCreateView, ContactRetrieveUpdateDestroy, ContactUser, ContactIsActiveView

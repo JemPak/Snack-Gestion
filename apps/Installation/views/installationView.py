@@ -1,5 +1,4 @@
 #imports of Django and res_framework
-from http.client import ACCEPTED
 from apps.Installation.models.installation import Installation
 from rest_framework import generics, status
 from rest_framework.response import Response
@@ -12,7 +11,7 @@ class InstallationIsAcceptedView(generics.ListAPIView):
     queryset = Installation.objects.filter(accepted=False)[:10]
     serializer_class = InstallationSerializer
 
-class Installation_User(generics.ListAPIView):
+class InstallationUser(generics.ListAPIView):
     serializer_class = InstallationSerializer
     
     def get_queryset(self):
